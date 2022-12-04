@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@frontend-ecommerce/ui": ["libs/ui/src/index.ts"]
+      "@frontend-ecommerce/orders": ["libs/orders/src/index.ts"],
+      "@frontend-ecommerce/products": ["libs/products/src/index.ts"],
+      "@frontend-ecommerce/ui": ["libs/ui/src/index.ts"],
+      "@frontend-ecommerce/users": ["libs/users/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
