@@ -8,6 +8,7 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { UiModule } from '@frontend-ecommerce/ui';
 
 const routes: Routes = [
   {
@@ -26,7 +27,7 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), UiModule],
   providers: [],
   bootstrap: [AppComponent],
 })
