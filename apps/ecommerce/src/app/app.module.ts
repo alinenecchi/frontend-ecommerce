@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
+import { AccordionModule } from 'primeng/accordion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
@@ -9,8 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { UiModule } from '@frontend-ecommerce/ui';
-import {AccordionModule} from 'primeng/accordion';
-
 
 const routes: Routes = [
   {
@@ -30,7 +28,7 @@ const routes: Routes = [
     HeaderComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     UiModule,
     AccordionModule,
