@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { UiModule } from '@frontend-ecommerce/ui';
 import {AccordionModule} from 'primeng/accordion';
 
+
 const routes: Routes = [
   {
     path: '',

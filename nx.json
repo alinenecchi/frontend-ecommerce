@@ -33,7 +33,7 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },
   "generators": {
     "@nrwl/angular:application": {
@@ -48,7 +48,15 @@
     },
     "@nrwl/angular:component": {
       "style": "scss"
+    },
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     }
   },
-  "defaultProject": "ecommerce"
+  "defaultProject": "ecommerce",
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  }
 }
