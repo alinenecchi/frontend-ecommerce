@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'frontend-ecommerce-root',
+  selector: 'admin-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
