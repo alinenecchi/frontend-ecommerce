@@ -4,11 +4,14 @@
 @import './base/fonts.scss';
 @import './base/mixins.scss';
 
+// https://getbootstrap.com/docs/5.2/getting-started/download/
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 //Libraries
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/themes/saga-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
-@import '~primeflex/primeflex.scss';
+//@import '~primeflex/primeflex.scss';
 @import '~animate.css/animate.css';
 
 @import './base/configuration.scss';
