@@ -63,5 +63,7 @@
 
   &-page {
     padding: 15px;
+    width: calc(100% - 175px);
+    margin-left: 175px;
   }
 }
