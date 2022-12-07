@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -14,8 +15,21 @@ import { ButtonModule } from 'primeng/button';
 
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesFormComponent } from './categories/categories-form/categories-form.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { CategoriesService } from '@frontend-ecommerce/products';
+import { MessageService } from 'primeng/api';
 
-const UX_MODELE = [CardModule, ToolbarModule, ButtonModule, TableModule];
+const UX_MODELE = [
+  CardModule,
+  ToolbarModule,
+  ButtonModule,
+  TableModule,
+  InputTextModule,
+  ToastModule,
+];
 
 const routes: Routes = [
   {
@@ -30,6 +44,10 @@ const routes: Routes = [
         path: 'categories',
         component: CategoriesListComponent,
       },
+      {
+        path: 'categories/form',
+        component: CategoriesFormComponent,
+      },
     ],
   },
 ];
@@ -41,14 +59,18 @@ const routes: Routes = [
     ShellComponent,
     SidebarComponent,
     CategoriesListComponent,
+    CategoriesFormComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
     ...UX_MODELE,
   ],
-  providers: [],
+  providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
