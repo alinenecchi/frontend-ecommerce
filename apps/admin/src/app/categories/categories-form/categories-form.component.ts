@@ -53,7 +53,7 @@ export class CategoriesFormComponent implements OnInit {
 
   private _updateCategory(category: Category) {
     this.categoriesServices.updateCategory(category).subscribe(
-      (response) => {
+      () => {
         this.messageService.add({
           severity: 'success',
           summary: 'Success',
@@ -65,42 +65,37 @@ export class CategoriesFormComponent implements OnInit {
             this.location.back();
             console.log(done);
           });
-        console.log(response);
       },
-      (error) => {
+      () => {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
           detail: 'Category is not create',
         });
-        console.log(error);
       }
     );
   }
 
   private _addCategory(category: Category) {
     this.categoriesServices.createCategory(category).subscribe(
-      (response) => {
+      (category: Category) => {
         this.messageService.add({
           severity: 'success',
           summary: 'Success',
-          detail: 'Category is create',
+          detail: `Category ${category.name} is create`,
         });
         timer(2000)
           .toPromise()
-          .then((done) => {
+          .then(() => {
             this.location.back();
-            console.log(done);
           });
-        console.log(response);
       },
-      (error) => {
+      () => {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
           detail: 'Category is not create',
         });
-        console.log(error);
       }
     );
   }
