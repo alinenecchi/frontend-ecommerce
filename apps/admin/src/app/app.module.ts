@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { CategoriesService } from '@frontend-ecommerce/products';
 import { MessageService } from 'primeng/api';
+import {ColorPickerModule} from 'primeng/colorpicker';
 
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
@@ -32,7 +33,8 @@ const UX_MODELE = [
   TableModule,
   InputTextModule,
   ToastModule,
-  ConfirmDialogModule
+  ConfirmDialogModule,
+  ColorPickerModule
 ];
 
 const routes: Routes = [
