@@ -22,6 +22,9 @@ import { ToastModule } from 'primeng/toast';
 import { CategoriesService } from '@frontend-ecommerce/products';
 import { MessageService } from 'primeng/api';
 
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+
 const UX_MODELE = [
   CardModule,
   ToolbarModule,
@@ -29,6 +32,7 @@ const UX_MODELE = [
   TableModule,
   InputTextModule,
   ToastModule,
+  ConfirmDialogModule
 ];
 
 const routes: Routes = [
@@ -70,7 +74,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
     ...UX_MODELE,
   ],
-  providers: [CategoriesService, MessageService],
+  providers: [CategoriesService, MessageService, ConfirmationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
